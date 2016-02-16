@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLocationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,157 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-Tn-qj0">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="eb0-oM-8pr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eb0-oM-8pr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="eb0-oM-8pr"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For latitude value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bad-KT-ppt">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-FE-36T">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For longitude value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFg-qp-2Am">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIU-GJ-ReA">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-Fb-FT5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Get My Location"/>
+                                <connections>
+                                    <action selector="getCurrenLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWL-wB-TYI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-Nh-OMu">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oIU-GJ-ReA" firstAttribute="top" secondItem="LFg-qp-2Am" secondAttribute="bottom" constant="82" id="3h6-Wl-wtC"/>
+                            <constraint firstItem="Ham-Tn-qj0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="7et-af-DFn"/>
+                            <constraint firstItem="Ham-Tn-qj0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="8Cn-ia-DiC"/>
+                            <constraint firstItem="jvF-Fb-FT5" firstAttribute="trailing" secondItem="oIU-GJ-ReA" secondAttribute="trailing" id="AN3-Tc-HQq"/>
+                            <constraint firstItem="oIU-GJ-ReA" firstAttribute="trailing" secondItem="LFg-qp-2Am" secondAttribute="trailing" id="FJ7-Lb-1Tm"/>
+                            <constraint firstItem="ARA-Nh-OMu" firstAttribute="leading" secondItem="QXB-FE-36T" secondAttribute="leading" id="GDD-Ko-xO5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jvF-Fb-FT5" secondAttribute="bottom" constant="225" id="GDN-WN-S5u"/>
+                            <constraint firstItem="bad-KT-ppt" firstAttribute="trailing" secondItem="LFg-qp-2Am" secondAttribute="trailing" id="Rxy-Mj-KKI"/>
+                            <constraint firstItem="Ham-Tn-qj0" firstAttribute="leading" secondItem="QXB-FE-36T" secondAttribute="leading" id="Sbg-xW-zl8"/>
+                            <constraint firstItem="bad-KT-ppt" firstAttribute="leading" secondItem="Ham-Tn-qj0" secondAttribute="trailing" constant="66" id="Tym-AD-pQf"/>
+                            <constraint firstItem="LFg-qp-2Am" firstAttribute="leading" secondItem="bad-KT-ppt" secondAttribute="leading" id="Ui5-uP-nun"/>
+                            <constraint firstItem="ARA-Nh-OMu" firstAttribute="top" secondItem="QXB-FE-36T" secondAttribute="bottom" constant="38" id="Us7-b9-nMj"/>
+                            <constraint firstItem="LFg-qp-2Am" firstAttribute="baseline" secondItem="QXB-FE-36T" secondAttribute="baseline" id="XAG-sd-bgr"/>
+                            <constraint firstItem="QXB-FE-36T" firstAttribute="top" secondItem="Ham-Tn-qj0" secondAttribute="bottom" constant="27" id="YP8-o6-zAL"/>
+                            <constraint firstItem="Ham-Tn-qj0" firstAttribute="baseline" secondItem="bad-KT-ppt" secondAttribute="baseline" id="Zmv-o8-PJU"/>
+                            <constraint firstItem="jvF-Fb-FT5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fzB-x8-Mw0"/>
+                            <constraint firstItem="bad-KT-ppt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gRd-cz-cVQ"/>
+                            <constraint firstItem="LFg-qp-2Am" firstAttribute="leading" secondItem="oIU-GJ-ReA" secondAttribute="leading" id="kLi-5R-eij"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ham-Tn-qj0"/>
+                                <exclude reference="bad-KT-ppt"/>
+                                <exclude reference="QXB-FE-36T"/>
+                                <exclude reference="LFg-qp-2Am"/>
+                                <exclude reference="oIU-GJ-ReA"/>
+                                <exclude reference="jvF-Fb-FT5"/>
+                                <exclude reference="ARA-Nh-OMu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7et-af-DFn"/>
+                                <exclude reference="8Cn-ia-DiC"/>
+                                <exclude reference="Sbg-xW-zl8"/>
+                                <exclude reference="Zmv-o8-PJU"/>
+                                <exclude reference="YP8-o6-zAL"/>
+                                <exclude reference="Rxy-Mj-KKI"/>
+                                <exclude reference="Tym-AD-pQf"/>
+                                <exclude reference="gRd-cz-cVQ"/>
+                                <exclude reference="GDD-Ko-xO5"/>
+                                <exclude reference="Us7-b9-nMj"/>
+                                <exclude reference="Ui5-uP-nun"/>
+                                <exclude reference="XAG-sd-bgr"/>
+                                <exclude reference="kLi-5R-eij"/>
+                                <exclude reference="3h6-Wl-wtC"/>
+                                <exclude reference="FJ7-Lb-1Tm"/>
+                                <exclude reference="AN3-Tc-HQq"/>
+                                <exclude reference="fzB-x8-Mw0"/>
+                                <exclude reference="GDN-WN-S5u"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ham-Tn-qj0"/>
+                                <include reference="bad-KT-ppt"/>
+                                <include reference="QXB-FE-36T"/>
+                                <include reference="LFg-qp-2Am"/>
+                                <include reference="oIU-GJ-ReA"/>
+                                <include reference="jvF-Fb-FT5"/>
+                                <include reference="ARA-Nh-OMu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7et-af-DFn"/>
+                                <include reference="8Cn-ia-DiC"/>
+                                <include reference="Sbg-xW-zl8"/>
+                                <include reference="Zmv-o8-PJU"/>
+                                <include reference="YP8-o6-zAL"/>
+                                <include reference="Rxy-Mj-KKI"/>
+                                <include reference="Tym-AD-pQf"/>
+                                <include reference="gRd-cz-cVQ"/>
+                                <include reference="GDD-Ko-xO5"/>
+                                <include reference="Us7-b9-nMj"/>
+                                <include reference="Ui5-uP-nun"/>
+                                <include reference="XAG-sd-bgr"/>
+                                <include reference="kLi-5R-eij"/>
+                                <include reference="3h6-Wl-wtC"/>
+                                <include reference="FJ7-Lb-1Tm"/>
+                                <include reference="AN3-Tc-HQq"/>
+                                <include reference="fzB-x8-Mw0"/>
+                                <include reference="GDN-WN-S5u"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="oIU-GJ-ReA" id="GPb-0Z-IcM"/>
+                        <outlet property="latitudeLabel" destination="bad-KT-ppt" id="qKk-Dw-0uh"/>
+                        <outlet property="longitude" destination="LFg-qp-2Am" id="yAp-jt-gKD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="483" y="292"/>
         </scene>
     </scenes>
 </document>

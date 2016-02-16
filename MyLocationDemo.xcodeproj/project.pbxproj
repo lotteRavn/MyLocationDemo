@@ -14,6 +14,8 @@
 		C8E537951C72314E0079B582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E537941C72314E0079B582 /* Assets.xcassets */; };
 		C8E537981C72314E0079B582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E537961C72314E0079B582 /* LaunchScreen.storyboard */; };
 		C8E537A31C72314E0079B582 /* MyLocationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E537A21C72314E0079B582 /* MyLocationDemoTests.swift */; };
+		C8E537AE1C7236540079B582 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E537AD1C7236540079B582 /* CoreLocation.framework */; };
+		C8E537B21C725E190079B582 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E537B11C725E190079B582 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		C8E5379E1C72314E0079B582 /* MyLocationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E537A21C72314E0079B582 /* MyLocationDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationDemoTests.swift; sourceTree = "<group>"; };
 		C8E537A41C72314E0079B582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E537AD1C7236540079B582 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C8E537B11C725E190079B582 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E537B21C725E190079B582 /* MapKit.framework in Frameworks */,
+				C8E537AE1C7236540079B582 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 		C8E5377E1C72314D0079B582 = {
 			isa = PBXGroup;
 			children = (
+				C8E537B11C725E190079B582 /* MapKit.framework */,
+				C8E537AD1C7236540079B582 /* CoreLocation.framework */,
 				C8E537891C72314E0079B582 /* MyLocationDemo */,
 				C8E537A11C72314E0079B582 /* MyLocationDemoTests */,
 				C8E537881C72314E0079B582 /* Products */,
@@ -149,6 +157,11 @@
 				TargetAttributes = {
 					C8E537861C72314E0079B582 = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C8E5379D1C72314E0079B582 = {
 						CreatedOnToolsVersion = 7.2.1;
